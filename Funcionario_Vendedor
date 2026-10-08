@@ -1,0 +1,18 @@
+class Funcionario:
+    def __init__(self, nome, salario):
+        self.nome = nome
+        self.salario = salario
+
+
+class Vendedor(Funcionario):
+    def __init__(self, nome, salario):
+        super().__init__(nome, salario)
+
+    def calcularPagamento(self):
+        return self.salario + 100
+
+
+vendedor = Vendedor("Ana", 1500)
+
+print("Nome:", vendedor.nome)
+print("Pagamento: R$", vendedor.calcularPagamento())
